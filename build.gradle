@@ -1,0 +1,72 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.0'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7'
+        classpath "gradle.plugin.nl.javadude.gradle.plugins:license-gradle-plugin:0.13.1"
+        //eventbus的索引需要
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+//        classpath 'com.antfortune.freeline:gradle:0.8.6'
+//        compile 'com.tencent.bugly:crashreport:latest.release'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        maven {
+            url "https://jitpack.io"
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+// Define versions in a single place
+ext {
+    // Sdk and tools  的依赖
+    minSdkVersion = 16
+    targetSdkVersion = 21
+    compileSdkVersion = 25
+    buildToolsVersion = '25.0.0'
+    // App dependencies
+    supportLibraryVersion = '25.1.1'
+    butterknifeVersion = '8.4.0'
+    butterknifeVersion = '8.4.0'
+    okhttputilsVersion = '2.6.2'
+    rvadapterVersion = '3.0.3'
+    fastjsonVersion = '1.2.8'
+    frescoVersion = '0.14.1'
+    jiecaovideoplayerVersion = '5.4'
+    eventbusVersion = '3.0.0'
+    ultraPtrVersion = '1.0.11'
+    LRecyclerViewVersion = '1.2.5'
+    ijkplayerVersion = '0.7.5'
+    LubanVersion = '1.0.9'
+    weakHandlerVersion = '1.1'
+   rxpermissionsVersion = '0.9.0@aar'//动态权限
+    rxandroidVersion = '1.2.1'
+    rxjavaVersion = '1.1.6'
+    jpushVersion = '3.0.0'
+    jpushJcoreVersion = '1.0.0'
+    litepalVersion = '1.3.2'
+    materialdialogVersion = '1.3.1'
+    cropperVersion = '1.0.1'
+    glideVersion = '3.7.0'
+    UpdatePluginVersion = '0.7.1'
+    okhttpVersion = '3.3.1'
+    okioVersion = '1.8.0'
+    subsamplingVersion = '3.6.0'
+    commonsIoVersion = '2.5'
+    loggerVersion = '1.15'
+}

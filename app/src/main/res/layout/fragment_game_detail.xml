@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:showPercent="1"
+    android:id="@+id/suspend_root">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+        <com.anzhuo.video.app.movie.x5blink.X5WebView
+            android:id="@+id/webview_game"
+            android:background="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"/>
+
+            <LinearLayout
+                android:id="@+id/ll_remark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:background="#50000000" >
+
+                <TextView
+                    android:id="@+id/movie_remark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="3dp"
+                    tools:text="9s"
+                    android:textSize="12sp"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/adview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:background="#00000000"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/film_name"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            tools:text="湄公河行动"/>
+
+        <LinearLayout
+            android:id="@+id/ll_chose"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/main_color"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="选集"
+                android:layout_marginLeft="10dp"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/select_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                tools:text="正在播放第01集"
+                android:textColor="@color/main_text_gray"
+                android:gravity="right"/>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.anzhuo.video.app.manager.fuli2.BaseGridView
+                    android:id="@+id/chose_gridview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:horizontalSpacing="2dp"
+                    android:verticalSpacing="2dp"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone"
+                    />
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/main_color"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="大家都在看"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="12sp"/>
+
+                </LinearLayout>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/movieRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/white"
+                    />
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>

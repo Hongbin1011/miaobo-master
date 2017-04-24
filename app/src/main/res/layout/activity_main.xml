@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:background="@color/text_theme_main">
+
+    <com.anzhuo.video.app.widget.CustomViewPager
+        android:id="@+id/vp_main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        tools:background="@color/text_theme_main"/>
+
+    <RadioGroup
+        android:id="@+id/rg_main"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        tools:background="#fff"
+        >
+
+        <RadioButton
+            android:id="@+id/rb_home"
+            style="@style/homeRadioButton"
+            android:checked="true"
+            android:drawableTop="@drawable/selector_home_tab"
+            android:text="@string/home_page"/>
+        <RadioButton
+            android:id="@+id/rb_weal"
+            style="@style/homeRadioButton"
+            android:drawableTop="@drawable/selector_main_tab"
+            android:text="@string/weal"/>
+
+        <RadioButton
+            android:id="@+id/rb_search"
+            style="@style/homeRadioButton"
+            android:drawableTop="@drawable/selector_message_tab"
+            android:text="@string/search"/>
+        <RadioButton
+            android:id="@+id/rb_collect"
+            style="@style/homeRadioButton"
+            android:drawableTop="@drawable/selector_check_tab"
+            android:text="@string/personal_center"/>
+
+    </RadioGroup>
+</LinearLayout>

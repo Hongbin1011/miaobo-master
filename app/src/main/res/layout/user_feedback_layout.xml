@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/general_head_layout_m" />
+
+    <EditText
+        android:id="@+id/feedback_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minLines="7"
+        android:minEms="10"
+        android:maxLength="1000"
+        android:gravity="top|left"
+        android:paddingTop="@dimen/dp5"
+        android:paddingLeft="@dimen/dp10"
+        android:hint="@string/user_feedback_string"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp15"
+        android:layout_margin="@dimen/dp10"
+        android:background="@drawable/edittext_bg"
+        />
+
+    <EditText
+        android:id="@+id/feedback_contact"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp40"
+        android:paddingLeft="@dimen/dp10"
+        android:hint="@string/contact_information"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp15"
+        android:layout_margin="@dimen/dp10"
+        android:background="@drawable/edittext2_bg"></EditText>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="@string/thankings_strig"
+        android:textSize="@dimen/sp12"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginRight="@dimen/dp10"
+        android:textColor="@color/grayad"
+        android:layout_marginTop="@dimen/dp6"
+        />
+
+    <Button
+        android:id="@+id/feedback_submit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp40"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginRight="@dimen/dp10"
+        android:textColor="@color/white"
+        android:text="提交"
+        android:background="@drawable/button_bg_m"
+        android:layout_marginTop="@dimen/dp10"
+        />
+
+</LinearLayout>

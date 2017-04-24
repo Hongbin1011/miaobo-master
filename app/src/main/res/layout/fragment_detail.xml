@@ -1,0 +1,78 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rv_gen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_10"
+    android:orientation="vertical"
+    tools:context="com.anzhuo.video.app.ui.fragment.DetailFragment">
+
+    <LinearLayout
+        android:id="@+id/rv_gen2"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.github.jdsjlzx.recyclerview.LuRecyclerView
+            android:id="@+id/rv_recyview"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/dp_5"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_5">
+
+            <EditText
+                android:id="@+id/comments_edit"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/comments_add"
+                android:background="@drawable/edittext_bg"
+                android:drawableLeft="@drawable/send_comment"
+                android:drawablePadding="@dimen/dp_12"
+                android:gravity="center_vertical"
+                android:hint="来一条高能评论"
+                android:maxLines="5"
+                android:paddingBottom="@dimen/dp_5"
+                android:paddingLeft="@dimen/dp_12"
+                android:paddingRight="@dimen/dp_5"
+
+                android:paddingTop="@dimen/dp_5"
+                android:textColor="@color/text_theme_black"
+                android:textColorHint="@color/text_remind_gray_light"
+                android:textSize="@dimen/sp_15"/>
+
+            <TextView
+                android:id="@+id/comments_add"
+                android:layout_width="60dp"
+                android:layout_height="35dp"
+                android:layout_alignBottom="@+id/comments_edit"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/comments_edit"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="4dp"
+                android:background="@drawable/shape_main_theme"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dp_5"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:paddingTop="@dimen/dp_5"
+                android:text="@string/publish"
+                android:textColor="@color/High_light_gray"
+                android:textSize="@dimen/sp_16"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

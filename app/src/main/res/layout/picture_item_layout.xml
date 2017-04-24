@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/picture_item_main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/picture_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/graye0">
+
+        <ImageView
+            android:id="@+id/picture_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/picture_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginBottom="15dp"
+            android:drawableLeft="@drawable/img_num"
+            android:drawablePadding="@dimen/dp_6"
+            android:gravity="center"
+            android:text="9"
+            android:textColor="@android:color/white" />
+
+        <CheckBox
+            android:id="@+id/checkbox_img"
+            style="@style/MyCheck_Box"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_alignParentRight="true"
+            android:checked="false"
+            android:clickable="false" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

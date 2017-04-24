@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--MultiStateView-->
+    <item name="stateView" type="id">false</item>
+    <item name="tvRetry" type="id">false</item>
+    <item name="tvEmpty" type="id">false</item>
+
+
+
+    <item name="baseFragmentContainer" type="id">false</item>
+    <item name="rvBaseRecycler" type="id">false</item>
+    <item name="vpBasePager" type="id">false</item>
+    <item name="vipTabIndicator" type="id">false</item>
+    <item name="flPtrClassic" type="id">false</item>
+    <!--不可滑动的ViewPager的id-->
+    <item name="vpInnerPager" type="id">false</item>
+    <!--专门嵌套在Scrollview中的RecyclerView的id-->
+    <item name="rvNestedRecycler" type="id">false</item>
+
+
+    <!--应用item布局id-->
+    <item name="siAppSimple" type="id">false</item>
+    <!--应用item 左边icon-->
+    <item name="ivGameIcon" type="id">false</item>
+    <!--应用item右边信息-->
+    <item name="llAppInfo" type="id">false</item>
+    <!--应用item底部分割线-->
+    <item name="viDivider" type="id">false</item>
+
+    <item name="siDownManageSimple" type="id">false</item>
+    <item name="siUpdateSimple" type="id">false</item>
+
+    <item name="abBase" type="id">false</item>
+
+
+
+    <!--actionbar返回id-->
+    <item name="abBack" type="id">false</item>
+    <item name="abBackLl" type="id">false</item>
+
+    <item name="abRight" type="id">false</item>
+
+    <item type="id" name="appSimple">false</item>
+
+
+
+    <item name="captureDecodeSucceeded" type="id">false</item><!--二维码扫描id-->
+    <item name="captureDecodeFailed" type="id">false</item><!--二维码扫描id-->
+    <item name="captureDecode" type="id">false</item><!--二维码扫描id-->
+    <item name="captureQuit" type="id">false</item><!--二维码扫描id-->
+    <item name="captureAutoFocus" type="id">false</item><!--二维码扫描id-->
+    <item name="captureRestartPreview" type="id">false</item><!--二维码扫描id-->
+    <item name="captureReturnScanResult" type="id">false</item><!--二维码扫描id-->
+
+    <item name="scanLamp" type="id">false</item>
+    <item name="version_info_title" type="id">false</item>
+
+
+
+    <item type="id" name="download_manage_head_tag">false</item><!--下载管理头部布局tag-->
+
+    <item type="id" name="down_manage_view_cancel">false</item><!--下载管理取消按钮id-->
+    <item type="id" name="down_manage_view_pause">false</item><!--下载管理暂停按钮id-->
+    <item type="id" name="down_manage_view_continue">false</item><!--下载管理继续按钮id-->
+    <item type="id" name="down_manage_view_clear">false</item><!--下载管理清除按钮id-->
+    <item type="id" name="down_manage_view_install">false</item><!--下载管理安装按钮id-->
+    <item type="id" name="down_manage_view_open">false</item><!--下载管理打开按钮id-->
+    <item type="id" name="manage_down_pause_progress">false</item><!--下载管理progressbar(暂停)id-->
+    <item type="id" name="manage_down_start_progress">false</item><!--下载管理下载管理progressbar(继续)id-->
+    <item type="id" name="download_manage_download_tag">false</item><!--下载管理下载布局tag-->
+    <item type="id" name="download_manage_history_tag">false</item><!--下载管理历史布局tag-->
+
+
+    <!--空间清理相关id-->
+    <item type="id" name="group_trash_view_tag">false</item>
+    <item type="id" name="group_local_app_view_tag">false</item>
+    <item type="id" name="group_divide_view_tag">false</item>
+    <item type="id" name="child_trash_view_tag">false</item>
+    <item type="id" name="child_head_view_tag">false</item>
+    <item type="id" name="child_bigfile_view_tag">false</item>
+    <item type="id" name="adapter_item_tag_key"></item>
+</resources>

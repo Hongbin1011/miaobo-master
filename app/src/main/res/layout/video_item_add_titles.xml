@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="80dp"
+    android:layout_height="40dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tview_titles"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:background="#F1F1F1"
+        android:gravity="center"
+        android:text="娱乐"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp16" />
+
+    <ImageView
+        android:id="@+id/ico_selecteds"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/tag_check"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

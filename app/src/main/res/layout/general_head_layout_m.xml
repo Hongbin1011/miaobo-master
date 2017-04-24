@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_head_layout"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/main_c1">
+
+    <RelativeLayout
+        android:id="@+id/child_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/main_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp10"
+            android:scaleType="centerCrop"
+            android:src="@drawable/back" />
+
+        <ImageView
+            android:id="@+id/head_right_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp10"
+            android:textColor="@color/white"
+            android:background="@drawable/editor_collection"
+            android:scaleType="centerCrop"
+            android:padding="@dimen/dp10"
+            android:visibility="gone"
+            android:textSize="@dimen/sp16"/>
+
+        <TextView
+            android:id="@+id/head_right_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp10"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp16"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/head_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:maxLength="12"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp16" />
+    </RelativeLayout>
+
+</RelativeLayout>

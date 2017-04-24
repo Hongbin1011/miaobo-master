@@ -1,0 +1,225 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'bugly'
+apply plugin: 'com.neenbedankt.android-apt'
+//apply plugin: 'realm-android'
+//apply plugin: 'com.antfortune.freeline'
+
+apt {
+    arguments {
+        eventBusIndex "com.study.sangerzhong.studyapp.MyEventBusIndex"
+    }
+}
+
+
+
+
+//bugly {
+//    appId = '4461108a81' // 注册时分配的App ID
+//    appKey = 'cc526ee3-21f0-43f4-8f58-f18c52ef1aee' // 注册时分配的App Key
+//}
+android {
+    //只需要支持中文
+    signingConfigs {
+        debug {
+            keyAlias '秒播'
+            keyPassword 'fulishipin2017'
+            storeFile file('E:/福利视频/签名/fulishipin.jks')
+            storePassword 'fulishipin2017'
+        }
+        release {
+            keyAlias '秒播'
+            keyPassword 'fulishipin2017'
+            storeFile file('E:/福利视频/签名/fulishipin.jks')
+            storePassword 'fulishipin2017'
+        }
+    }
+    defaultConfig {
+        resConfigs "zh"
+    }
+    useLibrary 'org.apache.http.legacy'
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+//    dexOptions {
+//        preDexLibraries = false
+//        javaMaxHeapSize "4g"   //这个改大
+//    }
+    repositories {
+        mavenCentral()
+        maven {
+            url "https://oss.sonatype.org/content/repositories/snapshots/"
+        }
+        maven {
+            url "https://jitpack.io"
+        }
+    }
+    defaultConfig {
+        applicationId "com.anzhuo.fulishipin.app"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 2
+        versionName "1.1"
+        //分包
+        multiDexEnabled true
+
+        manifestPlaceholders = [UMENG_CHANNEL_VALUE: "miaobo_guangwang"]
+
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'armeabi-v8a', 'x86', 'x86_64', 'mips', 'mips64'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+        //极光
+//        manifestPlaceholders = [
+//                JPUSH_PKGNAME: applicationId,
+//                JPUSH_APPKEY : "cd4206b1c43acb1ef3b4c210", //JPush上注册的包名对应的appkey.
+//                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+//        ]
+
+    }
+
+//    aaptOptions {
+//        additionalParameters "--no-version-vectors"
+//    }
+
+
+    productFlavors {
+        miaobo_guangwang{}
+        miaobo_baidu_wap{}
+        miaobo_meinv_app{}
+        miaobo_ystt_app{}
+        miaobo_djcc{}
+        miaobo_5ydj{}
+
+//        freeline {
+//            hack true
+//            productFlavor 'your-flavor'
+//        }
+
+
+    }
+
+    productFlavors.all { flavor ->
+        flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+    }
+
+
+    buildTypes {
+        //测试
+        debug {
+            // 显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            shrinkResources false
+        }
+
+        //正式
+        release {
+            // 不显示Log, 在java代码中的调用方式为：BuildConfig.LOG_DEBUG
+            buildConfigField "boolean", "LOG_DEBUG", "false" //正试上线 要改false
+            minifyEnabled false//是否启用混淆
+            // 移除无用的resource文件
+            shrinkResources false            //是否压缩
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildToolsVersion '25.0.0'
+}
+
+
+
+dependencies {
+
+    // 自动添加libs下的jar包
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    //support
+    compile "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
+    compile "com.android.support:design:$rootProject.supportLibraryVersion"
+    //    compile "com.android.support:support-v4:$rootProject.supportLibraryVersion"
+    compile 'com.android.support:support-v4:22.2.0'
+    compile "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
+//    compile 'com.android.support:support-dynamic-animation:25.3.0'
+    //butterknife
+    compile "com.jakewharton:butterknife:$rootProject.butterknifeVersion"
+    apt "com.jakewharton:butterknife-compiler:$rootProject.butterknifeVersion"
+    //zhy
+    compile "com.zhy:okhttputils:$rootProject.okhttputilsVersion"
+    compile "com.zhy:base-rvadapter:$rootProject.rvadapterVersion"
+    compile "com.alibaba:fastjson:$rootProject.fastjsonVersion"
+    //节操视频
+    compile "fm.jiecao:jiecaovideoplayer:$rootProject.jiecaovideoplayerVersion"
+    //    c# required, enough for most devices.
+    compile "tv.danmaku.ijk.media:ijkplayer-java:$rootProject.ijkplayerVersion"
+    compile "tv.danmaku.ijk.media:ijkplayer-armv7a:$rootProject.ijkplayerVersion"
+    compile "tv.danmaku.ijk.media:ijkplayer-x86:$rootProject.ijkplayerVersion"
+    // 支持 GIF ，需要添加
+    compile "com.facebook.fresco:fresco:$rootProject.frescoVersion"
+    compile "com.facebook.fresco:animated-gif:$rootProject.frescoVersion"
+    compile "com.facebook.fresco:imagepipeline-okhttp3:$rootProject.frescoVersion"
+    compile "org.greenrobot:eventbus:$rootProject.eventbusVersion"
+    compile "in.srain.cube:ultra-ptr:$rootProject.ultraPtrVersion"
+    compile "com.github.jdsjlzx:LRecyclerView:$rootProject.LRecyclerViewVersion"
+    //weakhandler
+    compile "com.badoo.mobile:android-weak-handler:$rootProject.weakHandlerVersion"
+    //动态请求权限
+    compile "com.tbruyelle.rxpermissions:rxpermissions:$rootProject.rxpermissionsVersion"
+    //rxjava
+    compile "io.reactivex:rxandroid:$rootProject.rxandroidVersion"
+    compile "io.reactivex:rxjava:$rootProject.rxjavaVersion"
+    //极光推送
+
+    //    compile "cn.jiguang.sdk:jpush:$rootProject.jpushVersion"
+
+    // 此处以JPush 3.0.0 版本为例。
+    compile "cn.jiguang.sdk:jcore:$rootProject.jpushJcoreVersion"
+    // 此处以JCore 1.0.0 版本为例。
+
+    //数据库
+    compile "org.litepal.android:core:$rootProject.litepalVersion"
+    compile "me.drakeet.materialdialog:library:$rootProject.materialdialogVersion"
+    compile "com.orhanobut:logger:$rootProject.loggerVersion"
+    //    compile 'com.github.bumptech.glide:glide:3.7.0'
+
+    //tab
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile 'com.github.hackware1993:MagicIndicator:1.5.0'
+    compile 'com.android.support:support-v4:25.1.1'
+    testCompile 'junit:junit:4.12'
+    apt 'org.greenrobot:eventbus-annotation-processor:3.0.1'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    //    compile 'me.yokeyword:fragmentation:0.10.1'
+    compile files('libs/tbs_sdk_thirdapp_v3.0.0.1038_43000_sharewithdownload_obfs_20170110_144724.jar')
+    //    美女的
+    compile 'com.shizhefei:ViewPagerIndicator:1.0.9'
+    compile 'com.github.chrisbanes:PhotoView:1.3.0'
+    compile 'com.lsjwzh:materialloadingprogressbar:0.5.8-RELEASE'
+    compile 'com.makeramen:roundedimageview:2.1.2'
+    compile 'jp.wasabeef:glide-transformations:2.0.0'
+    compile files('libs/sdk9500_V_1.0.5.jar')
+    compile 'com.youth.banner:banner:1.4.8'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.jakewharton.picasso:picasso2-okhttp3-downloader:1.0.2'
+    compile 'com.wuxiaolong.pullloadmorerecyclerview:library:1.0.4'
+    compile files('libs/Baidu_MobAds_SDK.jar')
+    compile files('libs/GDTUnionSDK.4.9.542.min.jar')
+    compile files('libs/wade.jar')
+    compile 'com.android.support:multidex:1.0.1'
+    //分包
+    compile 'com.tencent.bugly:crashreport:latest.release'
+    compile project(':temp_share_pay')
+}
+
+android.applicationVariants.all { variant ->
+    variant.outputs.each { output ->
+        // 删除unaligned apk
+        if (output.zipAlign != null) {
+            output.zipAlign.doLast {
+                output.zipAlign.inputFile.delete()
+            }
+        }
+    }
+}
+

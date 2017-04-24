@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/main_head_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/video_main">
+
+    <RelativeLayout
+        android:id="@+id/child_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:id="@+id/main_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp10"
+            android:scaleType="centerCrop"
+            android:src="@drawable/weather_btn_back"/>
+
+        <ImageView
+            android:id="@+id/main_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40dp"
+            android:padding="@dimen/dp10"
+            android:scaleType="centerCrop"
+            android:src="@drawable/weather_btn_exit"
+            android:visibility="gone"/>
+
+
+        <TextView
+            android:id="@+id/head_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxWidth="200dp"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/colorTitleFont"
+            android:textSize="@dimen/sp_18"/>
+
+        <ImageView
+            android:id="@+id/head_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp10"
+            android:src="@drawable/shezhi"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/head_right_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp5"
+            android:padding="@dimen/dp10"
+            android:text="提交"
+            android:textColor="@color/colorTitleFont"
+            android:textSize="@dimen/sp_16"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/head_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shadow"/>
+
+</RelativeLayout>

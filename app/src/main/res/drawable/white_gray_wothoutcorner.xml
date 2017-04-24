@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <!-- 实心    -->
+            <solid android:color="@color/High_light_gray" />
+
+        </shape>
+    </item>
+    <!-- not selected -->
+    <item>
+        <shape android:shape="rectangle">
+            <!-- 实心    -->
+            <solid android:color="@color/white" />
+
+        </shape>
+    </item>
+
+
+</selector>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/heard_ll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <!--标题-->
+    <LinearLayout
+        android:id="@+id/ll_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_item_joke_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_13"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_13"
+            android:text="这条大狗我给100分"
+            android:textColor="@color/text_theme_black"
+            android:textSize="@dimen/sp_17"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include
+                android:id="@+id/jc_video"
+                layout="@layout/include_video"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginLeft="@dimen/left_right_margin"
+                android:layout_marginRight="@dimen/left_right_margin"
+                android:background="@color/gif_load_back"
+                android:visibility="visible"/>
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:visibility="invisible"
+                android:id="@+id/item_is_vip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/left_right_margin"
+                android:layout_marginRight="@dimen/left_right_margin"
+                android:layout_marginTop="@dimen/dp_18"
+                android:src="@mipmap/vip"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/content_joke_item_2"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/line_rv_color"
+        />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/my_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        tools:layout_height="200dp"/>
+
+
+    <TextView
+        android:id="@+id/tv_usercomment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/comment_ico"
+        android:drawablePadding="@dimen/dp_10"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/left_right_margin"
+        android:text="用户评论"
+        android:textColor="@color/video_main"
+        android:textSize="@dimen/sp_16"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_dp"
+        android:layout_below="@+id/comment_main_time"
+        android:background="@color/line_color"/>
+
+    <TextView
+        android:id="@+id/comment_loding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:text="正在加载…"
+        />
+
+</LinearLayout>

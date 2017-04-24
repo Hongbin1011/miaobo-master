@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@id/baseFragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <View
+        android:id="@+id/viDivider"
+        style="@style/view_divider_vertical"
+        android:layout_above="@+id/llLayout" />
+
+    <LinearLayout
+        android:id="@+id/llLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tab_main_nav_height"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnMainCommon"
+            style="@style/MainTabButton"
+            android:drawableTop="@drawable/main_nav_common_bg"
+            android:text="@string/main_nav_text_common" />
+
+        <Button
+            android:id="@+id/btnMainGame"
+            style="@style/MainTabButton"
+            android:drawableTop="@drawable/main_nav_whole_bg"
+            android:text="@string/main_nav_text_game" />
+
+        <Button
+            android:id="@+id/btnMainFind"
+            style="@style/MainTabButton"
+            android:drawableTop="@drawable/main_nav_find_bg"
+            android:text="@string/main_nav_text_find" />
+
+
+        <Button
+            android:id="@+id/btnMainManager"
+            style="@style/MainTabButton"
+            android:drawableTop="@drawable/main_nav_manager_bg"
+            android:text="@string/main_nav_text_found" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

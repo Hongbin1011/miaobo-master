@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_c1"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/collection_head"
+        layout="@layout/general_head_layout_m" />
+
+    <RelativeLayout
+        android:id="@+id/collection_main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/collection_head"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/my_collection_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+
+        <Button
+            android:id="@+id/delete_imgs"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp40"
+            android:layout_alignParentBottom="true"
+            android:background="#FF95CA"
+            android:gravity="center"
+            android:text="删除已选中的图片"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp15"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

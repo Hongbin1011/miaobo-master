@@ -1,0 +1,49 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.lf.PayAndShare">
+
+    <application
+        android:allowBackup="true"
+        android:supportsRtl="true"
+        >
+        <!--<meta-data-->
+            <!--android:name="UMENG_APPKEY"-->
+            <!--android:value="57d75b0ae0f55a880c00094f" >-->
+        <!--</meta-data>-->
+        <!--<activity-->
+            <!--android:name="com.umeng.socialize.editorpage.ShareActivity"-->
+            <!--android:theme="@style/Theme.UMDefault"-->
+            <!--android:excludeFromRecents="true"/>-->
+
+
+        <!--新浪微博-->
+
+     <!--   <activity
+            android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
+            android:configChanges="keyboardHidden|orientation"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false" >
+        </activity>-->
+       <!-- <service
+            android:name="com.sina.weibo.sdk.net.DownloadService"
+            android:exported="false">
+        </service>-->
+
+        <!--qq qqZone-->
+        <!--<activity-->
+            <!--android:name="com.tencent.tauth.AuthActivity"-->
+            <!--android:launchMode="singleTask"-->
+            <!--android:noHistory="true" >-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.VIEW" />-->
+                <!--<category android:name="android.intent.category.DEFAULT" />-->
+                <!--<category android:name="android.intent.category.BROWSABLE" />-->
+                <!--<data android:scheme="tencent1105628260" />-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
+        <!--<activity-->
+            <!--android:name="com.tencent.connect.common.AssistActivity"-->
+            <!--android:screenOrientation="portrait"-->
+            <!--android:theme="@android:style/Theme.Translucent.NoTitleBar" />-->
+    </application>
+
+</manifest>

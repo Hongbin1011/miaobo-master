@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.anzhuo.video.app.widget.RelativeLayout.MyLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fc00"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_joke"/>
+
+    <RelativeLayout
+        android:id="@+id/details_connect"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/comments_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/line_view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_backgroud2"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingBottom="@dimen/dp_5"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:paddingTop="@dimen/dp_5">
+
+                <EditText
+                    android:id="@+id/comments_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/comments_add"
+                    android:background="@drawable/edittext_bg"
+                    android:hint="@string/comment_hint"
+                    android:maxLines="5"
+                    android:minHeight="35dp"
+                    android:padding="@dimen/dp_5"
+                    android:textColor="@color/text_theme_black"
+                    android:textColorHint="@color/text_remind_gray_light"
+                    android:textSize="@dimen/sp_14"/>
+
+                <TextView
+                    android:id="@+id/comments_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/comments_edit"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/comments_edit"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="4dp"
+                    android:background="@drawable/shape_main_theme"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/dp_5"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:paddingRight="@dimen/dp_10"
+                    android:paddingTop="@dimen/dp_5"
+                    android:text="@string/publish"
+                    android:textColor="@color/High_light_gray"
+                    android:textSize="@dimen/sp_16"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/comments_layout"
+            android:background="@color/white"/>
+
+    </RelativeLayout>
+
+</com.anzhuo.video.app.widget.RelativeLayout.MyLinearLayout>

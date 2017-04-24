@@ -1,0 +1,124 @@
+<resources>
+    <string name="app_name">秒播</string>
+    <!--没有网络-->
+    <string name="no_net">手机掉马桶了吗？连不上网了！</string>
+    <string name="connect_error">连接不上服务器</string>
+    <string name="analysis_error">解析出错</string>
+    <!-- 公共-->
+    <string name="sure">确定</string>
+    <string name="cancel">取消</string>
+
+    <string name="comment_hint">给楼主放点毒吧…</string>
+    <string name="search_text">搜索</string>
+
+    <!-- 详情页 -->
+
+    <string name="detail">详情</string>
+    <string name="comments">评论</string>
+    <string name="publish">发表</string>
+    <string name="newest_comments">最新评论</string>
+    <string name="teasing_comments">请输入你的神评论... </string>
+    <!--段子详情没有评论-->
+    <string name="detail_no_comment">快来抢沙发！</string>
+    <string name="search_none">空空如也</string>
+
+
+    <!--异常状态 页面提示-->
+    <string name="check_network">检查网络</string>
+    <!--用户中心-->
+
+    <!--点赞和点踩的提示语言-->
+    <string name="good_had">你已经赞过了</string>
+    <string name="bad_had">你已经踩过了</string>
+    <!--注册登录-->
+    <string name="confirm">确定</string>
+    <string name="check_net_is_connect">请检查网络是否连接?</string>
+    <!--意见反馈-->
+    <string name="input_no_empty">输入不能为空</string>
+    <!--分享相关-->
+    <string name="share_success">分享成功</string>
+    <string name="share_cancel">分享取消</string>
+    <string name="share_fail">分享失败</string>
+
+    <string name="delete_success">删除成功</string>
+
+    <!--加载状态-->
+    <string name="loading">加载中…</string>
+    <string name="loading_error">加载失败…</string>
+    <string name="loading_no_data">"暂无数据..."…</string>
+    <string name="loading_no_net">"又断网了！感觉世界抛弃了我！"</string>
+
+    <!--图片-->
+    <string name="long_img_tips">"点击查看长图"</string>
+
+    <!--没有名字的-->
+    <string name="user_name_null">"匿名用户"</string>
+    <!--设置-->
+    <!--2.0版本-->
+    <!--首页导航-->
+    <string name="home_page">"首页"</string>
+    <string name="collect">"收藏"</string>
+    <string name="personal_center">"我"</string>
+    <string name="search">"搜索"</string>
+    <string name="weal">"福利中心"</string>
+    <!--标题-->
+    <string name="PermissionTips_fail">"缺少必要的权限，图片功能不能正常使用，请授权"</string>
+    <string name="login_no_tips_myfragment">你还没有登录哟！\n 登录后与段友互动，分享快乐给你的朋友吧！</string>
+    <string name="mzw_common_retry_text">加载失败！点击刷新试试</string>
+    <string name="mzw_not_any_data">没有任何内容</string>
+    <string name="mzw_error_net_new">糟糕，加载失败了</string>
+    <string name="mzw_error_net">加载失败了</string>
+    <string name="record_position">上次看到这里，点击刷新</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!--=========================-->
+    <string name="no_more">没有更多数据</string>
+    <string name="zanorun">点赞或踩失败</string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="list_footer_end">已加载全部</string>
+    <string name="list_footer_loading">加载中…</string>
+    <string name="list_footer_network_error">点击重新加载</string>
+    <string name="comment_success">评论成功</string>
+    <string name="exit">再按一次，退出%s！</string>
+    <string name="search_null">啥都没找到,请更换关键词</string>
+    <string name="search_key">啥都没有,快来搜索关键词</string>
+    <string name="refresh_page">刷新页面</string>
+
+    <string name="search_foundhint">百度搜索</string>
+    <string name="ic_search_img">&#xe617;</string>
+    <string name="string_help_text">当前应用缺少必要权限。\n请点击"设置"-"权限"-打开所需权限。\n最后点击两次后退按钮，即可返回。</string>
+    <string name="help">帮助</string>
+    <string name="quit">退出</string>
+    <string name="settings">设置</string>
+    <string name="msg_no_camera">找不到系统相机</string>
+    <string name="search_results">搜索结果</string>
+    <string name="search_results_baidu">百度搜索推荐</string>
+
+    <string name="user_feedback_string">在这里输入您的宝贵反馈(10 一 100字之间)</string>
+    <string name="contact_information">QQ/邮箱/电话</string>
+    <string name="thankings_strig">感谢您对我们产品珍贵的反馈，我们将不断改进和完善！</string>
+    <string name="str_choose">正在播放第%1$s集</string>
+    <string name="main_nav_text_common">推荐</string>
+    <string name="main_nav_text_whole">全部</string>
+    <string name="main_nav_text_game">电影</string>
+    <string name="main_nav_text_find">电视剧</string>
+    <string name="main_nav_text_manager">电视剧</string>
+    <string name="main_nav_text_found">福利</string>
+    <string name="main_bottom">首页底部导航</string>
+    <string name="put_to_luncher">放到桌面</string>
+    <string name="search_intonewworld">搜索你想看的电影、电视</string>
+
+    <string name="search_hint">快来搜索</string>
+
+    <string name="personal_center_title">个人中心</string>
+    <string name="clear_cache">清除缓存</string>
+    <string name="personal_collect">我的收藏</string>
+    <string name="insert_money">续费</string>
+    <string name="exit_login">退出</string>
+
+</resources>

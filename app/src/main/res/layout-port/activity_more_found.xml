@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+    android:id="@+id/main_head_layout"
+    layout="@layout/general_head_layout" />
+
+    <!--<com.movie.beauty.lib.MultiStateView xmlns:app="http://schemas.android.com/apk/res-auto"-->
+        <!--android:id="@id/stateView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--app:emptyView="@layout/empty_view"-->
+        <!--app:errorView="@layout/error_view"-->
+        <!--app:loadingView="@layout/loading_view"-->
+        <!--android:layout_marginBottom="54dp"-->
+        <!--app:viewState="loading">-->
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/morefound_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    <!--</com.movie.beauty.lib.MultiStateView>-->
+
+</LinearLayout>

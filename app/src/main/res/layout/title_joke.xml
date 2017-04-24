@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/ll_title_joke"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/tab_height"
+              android:background="@color/white"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="49dp">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_return_black"/>
+
+        <ImageView
+            android:id="@+id/img_theme"
+            android:layout_width="wrap_content"
+            android:layout_height="47dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+
+        <ProgressBar
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@+id/img_theme"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="详情"
+            android:textColor="@color/text_theme_black"
+            android:textSize="@dimen/title_main"/>
+
+        <TextView
+            android:id="@+id/tv_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:padding="@dimen/dp_10"
+            android:visibility="gone"
+            android:textColor="@color/text_theme_black"
+            android:textSize="@dimen/sp_14"/>
+
+        <ImageView
+            android:id="@+id/img_right"
+            android:layout_width="wrap_content"
+            android:layout_height="47dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp_10"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+
+    <View
+        android:id="@+id/title_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line_color"
+        android:visibility="visible"/>
+</LinearLayout>

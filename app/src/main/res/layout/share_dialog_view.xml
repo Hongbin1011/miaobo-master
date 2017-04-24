@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dp_20"
+        android:paddingTop="@dimen/dp_20">
+
+        <TextView
+            android:id="@+id/tv_share_weixin"
+            style="@style/share_view"
+            android:drawablePadding="@dimen/dp_10"
+            android:drawableTop="@drawable/icon_share_wechat"
+            android:text="微信"/>
+
+        <TextView
+            android:id="@+id/tv_share_weixin_space"
+            style="@style/share_view"
+            android:drawablePadding="@dimen/dp_10"
+            android:drawableTop="@drawable/icon_share_moment"
+            android:text="微信朋友圈"/>
+
+        <TextView
+            android:id="@+id/tv_share_qq"
+            style="@style/share_view"
+            android:drawablePadding="@dimen/dp_10"
+            android:drawableTop="@drawable/icon_share_qq"
+            android:text="QQ"/>
+
+        <TextView
+            android:id="@+id/tv_share_qq_space"
+            style="@style/share_view"
+            android:drawablePadding="@dimen/dp_10"
+            android:drawableTop="@drawable/icon_share_zone"
+            android:text="QQ空间"/>
+
+        <TextView
+            android:id="@+id/tv_share_xinlang"
+            style="@style/share_view"
+            android:drawablePadding="@dimen/dp_10"
+            android:drawableTop="@drawable/icon_share_weibo"
+            android:text="新浪微博"/>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/line_share_pop"
+        layout="@layout/line_layout"/>
+
+    <TextView
+        android:id="@+id/tv_share_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="#111111"
+        android:textSize="16sp"/>
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!--   <TextView
+               android:id="@+id/text"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:drawablePadding="8dip"
+               android:drawableTop="@drawable/ab_picker_camera"
+               android:gravity="center"
+               android:text="@string/mzw_error_net"
+               android:textColor="#999999"
+               android:textSize="@dimen/sp_14" />-->
+        <!--    android:background="@drawable/ab_picker_camera"-->
+        <TextView
+            android:id="@+id/tvRetry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:drawablePadding="@dimen/dp_10"
+            android:drawableTop="@drawable/weiguanzhu"
+            android:gravity="center"
+            android:text="@string/mzw_common_retry_text"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16" />
+    </LinearLayout>
+
+</LinearLayout>

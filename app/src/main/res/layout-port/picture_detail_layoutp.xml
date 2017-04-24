@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/view_head"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:background="@color/black"-->
+    <!--android:orientation="vertical" />-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/img_detail_head_layout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="@dimen/dp50"-->
+    <!--android:background="@color/black"-->
+    <!--android:layout_below="@id/view_head"-->
+    <!-->-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/img_detail_back"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:src="@drawable/pic_back"-->
+    <!--android:padding="@dimen/dp10"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginLeft="@dimen/dp2"-->
+    <!--/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/img_total_num"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="@dimen/dp10"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="@dimen/sp16"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_marginRight="@dimen/dp10"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/img_title"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="@dimen/dp2"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="@dimen/sp16"-->
+    <!--android:singleLine="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_toLeftOf="@id/img_total_num"-->
+    <!--android:layout_toRightOf="@id/img_detail_back"-->
+    <!--/>-->
+
+    <!--</RelativeLayout>-->
+    <com.anzhuo.video.app.meinv.view.MyViewPager
+        android:id="@+id/picture_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+    </com.anzhuo.video.app.meinv.view.MyViewPager>
+
+    <RelativeLayout
+        android:id="@+id/bottom_function_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:layout_alignParentBottom="true"
+        android:background="@color/main_d3"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:id="@+id/img_detail_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp10"
+            android:src="@drawable/back"/>
+
+        <ImageView
+            android:id="@+id/img_detail_collection"
+            android:layout_width="31dp"
+            android:layout_height="31dp"
+            android:layout_centerInParent="true"/>
+
+        <!--<ImageView-->
+        <!--android:id="@+id/img_detail_good"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_marginTop="@dimen/dp15"-->
+        <!--android:layout_weight="1"-->
+        <!--android:background="@drawable/xihuan" />-->
+
+
+        <ImageView
+            android:id="@+id/img_detail_download"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="@dimen/dp30"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp10"
+            android:gravity="center"
+            android:src="@drawable/down"/>
+
+        <TextView
+            android:id="@+id/next_set_of"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp8"
+            android:gravity="center"
+            android:text="下一组"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp20"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

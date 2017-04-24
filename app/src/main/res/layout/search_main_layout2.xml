@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:background="@color/video_main"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <ImageButton
+            android:id="@+id/iv_SearchBack"
+            android:layout_width="42dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/common_view_click_bg"
+            android:src="@drawable/back"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:background="@drawable/common_round_bg_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/search_img_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp5"
+                android:src="@drawable/sousuo"
+                />
+            <EditText
+                android:id="@+id/search_edit_baidu"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="@string/search_foundhint"
+                android:imeOptions="actionSearch"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/dp5"
+                android:singleLine="true"
+                android:textColor="@color/edit_hint_color"
+                android:textColorHint="@color/edit_hint_color"
+                android:textSize="@dimen/sp_16"/>
+
+            <ImageView
+                android:id="@+id/iv_empty_search_words"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/btn_search_empty"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/common_view_click_bg"
+            android:text="@string/search_text"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <com.anzhuo.video.app.manager.fuli2.MultiStateView
+        android:id="@id/stateView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:emptyView="@layout/empty_view"
+        app:errorView="@layout/error_view"
+        android:background="@color/white"
+        app:loadingView="@layout/loading_view"
+        app:viewState="empty">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="blocksDescendants">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/serverResultContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/common_list_item_normal_color"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/serverResultTvTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="#F3F3F3"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="15dp"
+                        android:text="@string/search_results"
+                        android:textColor="@color/gray4d"/>
+
+                    <com.anzhuo.video.app.manager.fuli2.BaseGridView
+                        android:id="@+id/resultGridView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/serverResultTvTitle"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:horizontalSpacing="8dp"
+                        android:numColumns="4"
+                        android:padding="20dp"
+                        android:scrollbars="none"
+                        android:verticalSpacing="8dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/baiduResultContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/common_list_item_normal_color"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/baiduResultTvTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="#F3F3F3"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="15dp"
+                        android:text="@string/search_results_baidu"
+                        android:textColor="@color/gray4d"/>
+
+                    <ProgressBar
+                        android:id="@+id/progressBar_search"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_below="@id/baiduResultTvTitle"
+                        android:visibility="gone"/>
+
+                    <com.anzhuo.video.app.manager.fuli2.x5blink.X5WebView
+                        android:id="@+id/resultWebview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/progressBar_search"
+                        android:scrollbars="none"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </com.anzhuo.video.app.manager.fuli2.MultiStateView>
+    <!--<include-->
+    <!--android:id="@+id/navigation"-->
+    <!--layout="@layout/webview_bottom_navgation"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:visibility="gone"/>-->
+</LinearLayout>

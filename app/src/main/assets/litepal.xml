@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <!--数据库名字-->
+    <dbname value="dongla"/>
+    <!--数据库版本-->
+    <version value="5"/>
+    <!--最新版5-->
+    <!--上个版本3-->
+    <list>
+        <!--titles-->
+        <mapping class="com.anzhuo.video.app.model.bean.TitlesBean"/>
+        <mapping class="com.anzhuo.video.app.model.bean.UserClickBean"/>
+        <mapping class="com.anzhuo.video.app.model.bean.ContentListBean"/>
+        <mapping class="com.anzhuo.video.app.model.bean.CollectListBean"/>
+        <mapping class="com.anzhuo.video.app.model.bean.UserClickCommentBean"/>
+
+        <mapping class="com.anzhuo.video.app.search.entity.SearchRecordInfo"/>
+
+        <!--titles-->
+        <mapping class="com.anzhuo.video.app.meinv.entity.NavigationInfo"/>
+        <mapping class="com.anzhuo.video.app.meinv.entity.PictureDetailInfo"/>
+        <mapping class="com.anzhuo.video.app.meinv.entity.SearchRecordInfo"/>
+        <mapping class="com.anzhuo.video.app.meinv.entity.ItemListInfo"/>
+
+        <mapping class="com.anzhuo.video.app.dongtu.bean.dongtu.DongtuTitlesBean"/>
+        <mapping class="com.anzhuo.video.app.dongtu.bean.dongtu.DongtuUserClickBean"/>
+        <mapping class="com.anzhuo.video.app.dongtu.bean.dongtu.DongtuContentListBean"/>
+        <mapping class="com.anzhuo.video.app.dongtu.bean.dongtu.DongtuUserClickCommentBean"/>
+
+    </list>
+</litepal>

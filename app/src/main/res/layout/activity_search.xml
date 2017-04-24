@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_c1"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_c1"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/search_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="@dimen/dp10"
+            android:src="@drawable/back" />
+
+        <RelativeLayout
+            android:id="@+id/rl_search"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_margin="@dimen/dp10"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dp5"
+                android:layout_marginTop="@dimen/dp5"
+                android:background="@drawable/shape_search_edit"
+                android:hint="内衣，巨乳"
+                android:paddingLeft="@dimen/dp45"
+                android:textColor="@color/main_color_m"
+                android:textColorHint="#BEBEBE" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp15"
+                android:src="@drawable/sousuo" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="@dimen/dp10"
+            android:text="搜索"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shadow" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        >
+
+        <FrameLayout
+            android:id="@+id/fl_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:id="@+id/rl_no_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="90dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_no_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/null404" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_no_result"
+                android:layout_marginTop="@dimen/dp20"
+                android:text="啥都没找到,请更换关键词"
+                android:textSize="@dimen/sp16" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:orientation="vertical">
+
+    <include
+        android:id="@+id/main_head_layout"
+        layout="@layout/general_head_layout" />
+
+    <com.anzhuo.video.app.manager.fuli2.x5blink.X5WebView
+        android:id="@+id/forum_context"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_below="@id/main_head_layout"
+        android:scrollbars="none"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_below="@id/main_head_layout"
+        android:layout_height="2dp" />
+
+    <RelativeLayout
+        android:id="@+id/img_center"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_marginRight="3dp"
+        android:visibility="gone"
+        android:layout_height="44dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/best_close" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

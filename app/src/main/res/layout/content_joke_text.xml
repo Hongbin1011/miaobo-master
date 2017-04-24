@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          android:id="@+id/tv_item_joke_content"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/dp_13"
+          android:lineSpacingExtra="2dp"
+          android:lineSpacingMultiplier="1.1"
+          android:paddingLeft="@dimen/left_right_margin"
+          android:paddingRight="@dimen/left_right_margin"
+          android:textColor="@color/text_theme_black"
+          android:textSize="@dimen/sp_17"
+          tools:text="早上八点我还在睡觉，老妈打开房门：给屁股抹了点防晒霜了，哈哈哈。"/>

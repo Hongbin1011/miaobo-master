@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    >
+
+    <com.lsjwzh.widget.materialloadingprogressbar.CircleProgressBar
+        android:id="@+id/progress1"
+        app:mlpb_progress_stoke_width="3dp"
+        app:mlpb_progress_color="#566da9"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        app:mlpb_enable_circle_background="false"
+        />
+
+        <uk.co.senab.photoview.PhotoView
+            android:id="@+id/imageid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter" />
+
+
+</RelativeLayout>

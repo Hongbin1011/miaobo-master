@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <size
+        android:height="100dp"
+        android:width="100dp" />
+
+    <!-- 设置圆角的度数 0为直角-->
+    <corners android:radius="10dp" />
+    <solid android:color="@android:color/white"/>
+
+</shape>

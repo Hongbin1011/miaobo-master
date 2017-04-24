@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="navigation_bar">
+        <item>"推荐"</item>
+        <item>"汽车"</item>
+        <item>"娱乐"</item>
+        <item>"历史"</item>
+        <item>"搞笑"</item>
+        <item>"美食"</item>
+
+    </string-array>
+    <string-array name="navigation_bar_pingyin">
+        <item>"tuijian"</item>
+        <item>"qiche"</item>
+        <item>"yule"</item>
+        <item>"lishi"</item>
+        <item>"gaoxiao"</item>
+        <item>"meishi"</item>
+
+    </string-array>
+    <string-array name="navigation_bar_id">
+        <item>"0"</item>
+        <item>"qic"</item>
+        <item>"2"</item>
+        <item>"3"</item>
+        <item>"4"</item>
+        <item>"5"</item>
+
+    </string-array>
+
+
+</resources>

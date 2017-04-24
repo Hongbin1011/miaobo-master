@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#4d4d4d"
+        android:text="复制分享链接"
+        android:textSize="16sp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="#4d4d4d"
+        android:text="好APP不可独享！将链接分享给更多的朋友吧！"
+        android:singleLine="true"
+        android:textSize="14sp"
+        android:layout_below="@id/tv1"
+        android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/tv2"
+        android:background="@drawable/common_round_bg_orange"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/movie_share_url"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#4d4d4d"
+            android:singleLine="true"
+            android:text="http://dwz.cn/ER2343ff#"
+            android:textSize="14sp"
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_copy"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll1"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/movie_share_btn"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:textColor="@color/white"
+            android:singleLine="true"
+            android:text="复制"
+            android:textSize="16sp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

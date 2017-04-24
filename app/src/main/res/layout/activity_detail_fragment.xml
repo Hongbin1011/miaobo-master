@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_detail_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <include layout="@layout/title_joke"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/tv_no_net_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black_50"
+            android:gravity="center"
+            android:padding="@dimen/dp_10"
+            android:text="@string/no_net"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16"/>
+    </RelativeLayout>
+
+</LinearLayout>

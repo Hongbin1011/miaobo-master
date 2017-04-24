@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/video_main"
+        >
+
+        <ImageView
+            android:id="@+id/dongtu_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp5"
+            android:src="@drawable/back"
+            />
+
+        <net.lucode.hackware.magicindicator.MagicIndicator
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tab_layout_height"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/dongtu_back"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/dp8"
+            android:paddingRight="40dp"
+            />
+
+        <ImageView
+            android:id="@+id/addtabtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/tab_layout_height"
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@+id/tab_layout"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp15"
+            android:src="@drawable/jiahao"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.anzhuo.video.app.dongtu.utils.CustomViewPager
+            android:id="@+id/viewpger_news"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/tv_no_net_tips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#cfd43d3d"
+            android:gravity="center"
+            android:padding="@dimen/dp_10"
+            android:text="@string/no_net"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16"/>
+    </RelativeLayout>
+</LinearLayout>

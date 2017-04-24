@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.anzhuo.fulishipin.app">
+
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <!-- 移除快捷方式 -->
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT"/>
+
+    <!--<uses-permission android:name="android.permission.WRITE_APN_SETTINGS"/>-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <!-- 分享全部权限 -->
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <!-- 蓝牙分享所需的权限 -->
+    <!-- <uses-permission android:name="android.permission.BLUETOOTH"/>
+     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>-->
+
+    <!-- Required 自定义用来收发消息的相关权限 -->
+    <!-- <permission -->
+    <!-- android:name="${applicationId}.permission.JPUSH_MESSAGE" -->
+    <!-- android:protectionLevel="signature" /> -->
+
+    <!--<uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.RECORD_VIDEO"/>-->
+    <!-- Required  一些系统要求的权限，如访问网络等 -->
+    <!-- <uses-permission android:name="${applicationId}.permission.JPUSH_MESSAGE" /> -->
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+
+    <!-- Required 获取系统进行任务，清理内存的权限 -->
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+    <uses-permission android:name="android.permission.RESTART_PACKAGES"/>
+
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+
+    <application
+        android:name="com.anzhuo.video.app.config.VideoApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/icon_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon">
+
+        <activity
+            android:name="com.anzhuo.video.app.ui.activity.MainActivity"
+            android:allowBackup="true"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarMain"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+        <!--  android:windowSoftInputMode="adjustPan" 不设置会弹出导航栏-->
+        <receiver android:name="com.anzhuo.video.app.receiver.NetReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED"/>
+                <action android:name="android.net.wifi.STATE_CHANGE"/>
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="WPInstallChannel"
+            android:value="yc_test"/>
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5881d50a3eae252773000d65"/>
+        <!-- android:value="5881d50a3eae252773000d65"/> -->
+        <!-- 表示测试版本 -->
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}"/>
+
+        <activity
+            android:name="com.anzhuo.video.app.ui.activity.SplashActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="false"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/StartAppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.anzhuo.video.app.ui.activity.AddTitleActivity"
+            >
+        </activity>
+        <!-- android:theme="@style/AppTheme.NoActionBarDetailMains"-->
+
+        <activity
+            android:name="com.anzhuo.video.app.ui.activity.DetailActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+
+        <activity android:name="com.anzhuo.video.app.ui.activity.PhotoActivity"/>
+
+        <activity
+            android:name="com.anzhuo.video.app.ui.activity.ZxDetailActivityX5"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarMain"
+            ></activity>
+        <activity
+            android:name="com.anzhuo.video.app.manager.fuli2.activity.SubActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarMain"
+            >
+            <!-- "-->
+
+        </activity>
+
+        <activity
+            android:name="com.anzhuo.video.app.manager.fuli.GameActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme"></activity>
+        <!-- 权限 activity  -->
+        <activity
+            android:name="com.anzhuo.video.app.manager.fuli.MyPermissionsActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name="com.sdk9500.media.activity.WindowActivity"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity
+            android:name="com.sdk9500.media.activity.SplashActivity"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity
+            android:name="com.sdk9500.media.activity.H5WebViewClient"
+            android:launchMode="singleInstance"
+            />
+        <activity
+            android:name="com.sdk9500.media.activity.GetPermissionsActivity"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+        <service android:name="com.sdk9500.media.service.StarCraftService"/>
+        <meta-data
+            android:name="9500MEDIA_APPKEY"
+            android:value="2d39584d679ba6a272671567a449afab"/>
+        <!--1cb106c1adc48f782be6e51d387b06f1-->
+        <!-- 声明SDK所需要的组件 -->
+        <service
+            android:name="com.qq.e.comm.DownloadService"
+            android:exported="false"/>
+        <!-- 请开发者注意字母的大小写，ADActivity，而不是AdActivity -->
+        <activity
+            android:name="com.qq.e.ads.ADActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"/>
+
+        <!-- for baidu xadsdk internal web-browser -->
+        <!-- 非信息广告必须添加 -->
+        <activity
+            android:name="com.baidu.mobads.AppActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+        <!-- 信息流广告必须添加 -->
+        <activity
+            android:name="com.baidu.mobad.feeds.BaiduActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"/>
+
+        <!--百度-->
+        <meta-data
+            android:name="BaiduMobAd_APP_ID"
+            android:value="e866cfb0"/>
+        <!--SDK必须的appkey，用官网申请的Key值替换value的值-->
+        <!--     <meta-data
+                 android:name="9500MEDIA_APPKEY"
+                 android:value="2d39584d679ba6a272671567a449afab"/>-->
+        <!--测试key-->
+        <!--android:value="7925a92d92b34379fc9c78a44098e3dd"/>-->
+        <!--正式的-->
+        <!--android:value="2d39584d679ba6a272671567a449afab"/>-->
+
+
+        <!--******************** 美女图片  Activity start ******************** -->
+        <activity
+            android:name="com.anzhuo.video.app.meinv.MeinvMainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Translucent.Navigation"></activity>
+
+        <!-- 图片详情界面 -->
+        <activity
+            android:name="com.anzhuo.video.app.meinv.activity.PictureDetailsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="sensor"
+            android:theme="@style/SplashTheme"
+            />
+
+        <!-- 选择标签类型界面 -->
+        <activity
+            android:name="com.anzhuo.video.app.meinv.activity.AddTitleActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 设置界面 -->
+        <activity
+            android:name="com.anzhuo.video.app.meinv.activity.AppRelevantActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 搜索界面 -->
+        <activity
+            android:name="com.anzhuo.video.app.meinv.activity.SearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Translucent.Navigation"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+
+        <!-- 用户反馈界面 -->
+        <activity
+            android:name="com.anzhuo.video.app.meinv.activity.UserFeedbackActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 我的收藏界面 -->
+        <activity
+            android:name="com.anzhuo.video.app.meinv.activity.MyCollectionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Translucent.Navigation"/>
+
+        <!-- 购买界面 -->
+        <activity
+            android:name="com.anzhuo.video.app.meinv.activity.PurchaseActivity"
+            android:screenOrientation="portrait"/>
+        <!-- ****************美女图片  Activity  end***************** -->
+
+        <!--动图-->
+        <activity
+            android:name="com.anzhuo.video.app.dongtu.ui.activity.DongtuPhotoActivity"
+            android:theme="@style/AppTheme.NoActionBarPhotoMains"
+            />
+
+        <activity
+            android:name="com.anzhuo.video.app.dongtu.ui.activity.DongtuMainActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBarMain"
+            >
+        </activity>
+        <activity android:name="com.anzhuo.video.app.dongtu.ui.activity.DongtuAddTitleActivity"/>
+        <activity
+            android:name="com.anzhuo.video.app.dongtu.ui.activity.DongtuDetailActivity"
+            android:theme="@style/AppTheme.NoActionBarDetailMains"
+            />
+
+        <meta-data
+            android:name="QBSDKAppKey"
+            android:value="GZq4NZjjBWL7HnfsPxNGVZAl"/>
+
+        <activity
+            android:name="com.tencent.smtt.sdk.VideoActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="false"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="com.tencent.smtt.tbs.video.PLAY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name="com.anzhuo.video.app.movie.SubActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <activity
+            android:name="com.anzhuo.video.app.movie.GameActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme2"></activity>
+
+        <activity
+            android:name="com.anzhuo.video.app.movie.FilmPlayActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="com.anzhuo.video.app.movie.MovieMainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.MovieNoActionBarMain"/>
+
+        <!--我的收藏-->
+        <activity
+            android:name="com.anzhuo.video.app.ui.activity.CollectActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarMain"/>
+
+        <activity
+            android:name="com.wapu.wadelibrary.ShortCutActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden">
+            <intent-filter>
+                <action android:name="com.wapu.wadelibrary.action.SHORTCUT"/>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.anzhuo.fulishipin.app"></category>
+            </intent-filter>
+        </activity>
+
+        <receiver android:name="com.wapu.wadelibrary.AppInstallReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.wapu.wadelibrary.MyService">
+            <intent-filter>
+                <action android:name="com.wapu.SERVICE_TEST"/>
+                <category android:name="android.intent.category.default"/>
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>

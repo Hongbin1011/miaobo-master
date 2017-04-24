@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#FFFFFF</color>
+    <color name="white_96">#F2ffffff</color>
+    <color name="black">#000000</color>
+    <color name="red">#FFC93437</color>
+    <color name="blue">#FF375BF1</color>
+    <color name="yellow">#FFF7D23E</color>
+    <color name="green">#FF34A350</color>
+    <!--70的不透明-->
+    <color name="black_70">#B3000000</color>
+    <color name="black_10">#1A000000</color>
+    <color name="black_30">#4D000000</color>
+    <color name="black_50">#80000000</color>
+    <color name="backgrand">#F0F0F2</color>
+    <color name="dongla_main">#d43d3d</color>
+
+    <!-- 透明 -->
+    <color name="translucent_bg">#00000000</color>
+    <!-- 深灰色 -->
+    <color name="Light_gray">#b5b5b5</color>
+    <color name="custom_dark_666666">#666666</color>
+    <color name="High_light_gray">#f4f4f4</color>
+    <!--头部背景颜色-->
+    <color name="heard_color">#f3f3f3</color>
+    <color name="gif_load_back">#edecec</color>
+    <!--个人中心背景色-->
+    <color name="person_back">#DBDBDB</color>
+
+    <!-- app主体背景色 -->
+    <color name="gray_backgroud2">#ebebeb</color>
+    <color name="line_gray">#f5f5f5</color>
+    <color name="home_line">#e3e3e3</color>
+    <!-- 线的颜色没有统一-->
+    <color name="edit_hint_color">#999999</color>
+
+    <!--app主题色-->
+    <color name="theme_main">#ffa015</color>
+    <color name="theme_main_70">#B3ffa015</color>
+    <!--app文字主題色橘黄色色-->
+    <color name="text_theme_main">#ffa015</color>
+    <!--app文字主题色黑色-->
+    <color name="text_theme_black">#333333</color>
+    <!--app提示灰色文字颜色-->
+    <color name="text_remind_gray_light">#999999</color>
+    <!--App橙色主色调-->
+    <!-- 管理页颜色 -->
+    <color name="scrim">#42000000</color>
+    <color name="tumblr_primary">#36465D</color>
+
+    <!-- 消息中心删除背景色-->
+    <color name="red_delete">#fe3c2e</color>
+
+    <color name="login_text">#88000000</color>
+
+    <!-- 选择照片字体  蓝色-->
+    <color name="photo_text">#007aff</color>
+    <!--设置的字体颜色-->
+    <color name="set_color">#414141</color>
+    <color name="set_line">#BBBBBB</color>
+
+    <!--首页底部导航栏字体颜色-->
+    <color name="home_tab_text">#3D3D3D</color>
+
+
+    <!--新添的第二主题色-->
+    <color name="theme_color_2">#FFDE00</color>
+    <color name="theme_color_2_96">#f2FFDE00</color>
+    <color name="line_atten_me">#e3e3e3</color>
+
+    <color name="comment_text">#504f4f</color>
+
+    <color name="video_whites">#ded8d8</color>
+    <color name="video_main">#d43d3d</color>
+    <color name="video_main_prg">#d64c4c</color>
+
+    <color name="personal_f44b62">#f44b62</color>
+
+    <color name="line_color">#e5e5e5</color>
+    <color name="line_rv_color">#f2f2f2</color>
+
+    <color name="line_divede_color_light">#eeeeee</color>
+
+    <color name="skin_item_title_text_color">#ffffffff</color>
+    <color name="common_text_color">#666666</color>
+    <color name="graybe">#BEBEBE</color>
+    <color name="graye0">#E0E0E0</color>
+    <!--背景色点击状态-->
+    <color name="view_pressed">#18000000</color>
+    <!--分割线-->
+    <color name="view_divider">#eaeaea</color>
+    <color name="download_manage_group_divide_color">#f7f7f7</color>
+    <color name="mzw_line_color">#eaeaea</color>
+    <color name="colorTitleFont">#fff</color>
+    <color name="common_list_item_normal_color">#ffffff</color>
+    <color name="gray4d">#4D4D4D</color>
+    <!-- 美女图片的 -->
+
+    <color name="grayad">#ADADAD</color>
+    <color name="main_d3">#D31448</color>
+    <color name="main_c1">#C12E4A</color>
+    <color name="main_color_m">#FFe40280</color>
+    <color name="grayfc">#FCFCFC</color>
+    <color name="graydo">#d0d0d0</color>
+    <color name="grayad4f">#4f4f4f</color>
+    <color name="dongla_whites">#ded8d8</color>
+    <color name="afbob1">#afb0b1</color>
+    <color name="cllll">#999999</color>
+    <color name="main_color">#FFe40280</color>
+    <color name="savepath_headview_bg_color">#f5f5f5</color>
+    <color name="main_text_gray">#666666</color>
+    <color name="text_selected">#ff3333</color>
+    <color name="text_middle">#333333</color>
+    <color name="text_101010">#101010</color>
+
+</resources>
